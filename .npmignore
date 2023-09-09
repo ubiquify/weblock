@@ -1,0 +1,7 @@
+node_modules/
+*.tgz
+.npmrc
+ssl/*.key
+ssl/*.crt
+src/__tests__/
+dist/__tests__/

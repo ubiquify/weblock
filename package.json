@@ -1,0 +1,38 @@
+{
+  "name": "@ubiquify/weblock",
+  "version": "0.0.3",
+  "description": "Browser block store",
+  "homepage": "https://github.com/ubiquify/weblock",
+  "repository": "https://github.com/ubiquify/weblock",
+  "license": "(Apache-2.0 AND MIT)",
+  "author": "ubiquifier <ubiquify@proton.me>",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist node_modules",
+    "build": "tsc",
+    "test": "npm-run-all build test:jest",
+    "dev": "tsc -w",
+    "test:jest": "NODE_OPTIONS=--experimental-vm-modules cross-env jest --runInBand dist"
+  },
+  "jest": {
+    "testRegex": "(\\.(test|spec))\\.(js)$"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.5",
+    "@types/uuid": "^8.3.4",
+    "cross-env": "7.0.3",
+    "dotenv": "^16.0.3",
+    "fake-indexeddb": "^4.0.0",
+    "jest": "^28.1.2",
+    "npm-run-all": "4.1.5",
+    "rimraf": "3.0.2",
+    "typescript": "^4.5.5",
+    "uuid": "^8.3.2"
+  },
+  "dependencies": {
+    "idb-keyval": "^6.2.1"
+  }
+}
